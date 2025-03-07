@@ -15,6 +15,7 @@ import FAQ from './components/FAQ';
 import Policy from './components/Policy';
 
 function App() {  
+  
   return (
   <>
     <NavBar />

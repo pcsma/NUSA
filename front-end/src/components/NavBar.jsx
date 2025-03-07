@@ -31,8 +31,8 @@ const NavBar = () => {
 
         <div className={`fixed top-0 z-50 w-full flex justify-between py-1 px-4 items-center ${!top && 'bg-black dark:bg-n-5 bg-opacity-80 dark:bg-opacity-50 backdrop-blur dark:backdrop-blur'}`}> 
             <div className="flex">
-              <img className="cursor-pointer size-[4rem] md:size-[9rem] z-20 m-3" src={nulogo} alt="" />
-              <img className="cursor-pointer size-[5rem] md:size-[12rem] z-20" src={logo} alt="logo" />
+              <img className="cursor-pointer size-[4rem] md:size-[5rem] z-20 m-3" src={nulogo} alt="" />
+              <img className="cursor-pointer size-[5rem] md:size-[7rem] z-20" src={logo} alt="logo" />
             </div>
             <TiThMenu onClick={handleNav} className="z-20 text-white md:hidden cursor-pointer" size={25} />
             <div className="hidden md:flex m-8 items-center justify-between flex-row gap-8 text-2xl cursor-pointer">
@@ -41,7 +41,7 @@ const NavBar = () => {
               <TiThMenu onClick={handleNav} className="z-20 text-white cursor-pointer" />
             </div>  
             <div className={nav ? "ease-in duration-300 fixed text-gray-300 left-0 top-0 w-full h-screen bg-n-11/90 px-4 py-7 flex-col z-10" : 'absolute top-0 h-screen left-[-100%] ease-in duration-500 z-10'}>
-            <ul className="flex flex-col absolute w-full h-full items-center justify-center" onClick={handleNav}>
+            <ul className="flex flex-col w-full h-full items-center justify-center" onClick={handleNav}>
               <Link to='/'>
                 <li className="font-bold text-1xl p-4 cursor-pointer">
                   Home
