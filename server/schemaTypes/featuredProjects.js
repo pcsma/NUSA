@@ -1,6 +1,6 @@
 export default {
-    name: "research",
-    title: "Research",
+    name: "featuredProject",
+    title: "FeaturedProjects",
     type: "document",
     fields: [
         {
@@ -9,14 +9,14 @@ export default {
             title: "Image", 
         },
         {
-            name: "researchName",
+            name: "featuredProjectName",
             type: "string",
-            title: "ResearchName"
+            title: "ProjectName"
         },
         {
-            name: "researchDescription",
+            name: "featuredProjectDescription",
             type: "text",
-            title: "ResearchDescription"
+            title: "ProjectDescription"
         }
     ]
 }

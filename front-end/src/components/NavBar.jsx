@@ -15,6 +15,9 @@ const NavBar = () => {
       document.body.style.overflow = 'scroll'
     }
   };
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
   const [top, setTop] = useState(true);
   useEffect(() => {
     const scrollHandler = () => {
@@ -29,7 +32,8 @@ const NavBar = () => {
 
   return (
 
-        <div className={`fixed top-0 z-50 w-full flex justify-between py-1 px-4 items-center ${!top && 'bg-black dark:bg-n-5 bg-opacity-80 dark:bg-opacity-50 backdrop-blur dark:backdrop-blur'}`}> 
+    <div className={`fixed top-0 z-50 w-full flex justify-between py-1 px-4 items-center transition-all duration-300 ${!top ? 'bg-black dark:bg-n-5 bg-opacity-80 dark:bg-opacity-50 backdrop-blur-lg' : 'bg-transparent'}`}>
+
             <div className="flex">
               <img className="cursor-pointer size-[4rem] md:size-[5rem] z-20 m-3" src={nulogo} alt="" />
               <img className="cursor-pointer size-[5rem] md:size-[7rem] z-20" src={logo} alt="logo" />
@@ -40,39 +44,28 @@ const NavBar = () => {
               <FaSearch className="z-20 text-white cursor-pointer"/>
               <TiThMenu onClick={handleNav} className="z-20 text-white cursor-pointer" />
             </div>  
-            <div className={nav ? "ease-in duration-300 fixed text-gray-300 left-0 top-0 w-full h-screen bg-n-11/90 px-4 py-7 flex-col z-10" : 'absolute top-0 h-screen left-[-100%] ease-in duration-500 z-10'}>
+            <div className={`fixed top-0 left-0 w-full h-screen bg-n-11/90 px-4 py-7 flex flex-col z-50 transform transition-transform duration-300 text-white ${nav ? "translate-x-0" : "-translate-x-full"}`}>
+
             <ul className="flex flex-col w-full h-full items-center justify-center" onClick={handleNav}>
-              <Link to='/'>
+              <Link onClick={scrollToTop} to='/'>
                 <li className="font-bold text-1xl p-4 cursor-pointer">
                   Home
                 </li>
               </Link>
-              <Link to="./publication">
+              <Link onClick={scrollToTop} to="./publication">
                 <li className="font-bold text-1xl p-4 cursor-pointer">Publications</li>
               </Link>
-              <Link to="./people">
+              <Link onClick={scrollToTop} to="./people">
                 <li className="font-bold text-1xl p-4 cursor-pointer">
                 People</li>
               </Link>
-              <Link to="./projects">
+              <Link onClick={scrollToTop} to="./projects">
                 <li className="font-bold text-1xl p-4 cursor-pointer">Projects</li>
               </Link>
-              <Link to="./articles">
-                <li className="font-bold text-1xl p-4 cursor-pointer">Articles</li>
-              </Link>
-              <Link to="./events">
-                <li className="font-bold text-1xl p-4 cursor-pointer">Events</li>
-              </Link>
-              <Link to="./tools">
-                <li className="font-bold text-1xl p-4 cursor-pointer">Tools</li>
-              </Link>
-              <Link to="./data">
-                <li className="font-bold text-1xl p-4 cursor-pointer">Data</li>
-              </Link>
-              <Link to="./FAQ">
+              <Link onClick={scrollToTop} to="./FAQ">
                 <li className="font-bold text-1xl p-4 cursor-pointer">FAQ</li>
               </Link>
-              <Link to="./policy">
+              <Link onClick={scrollToTop} to="./policy">
                 <li className="font-bold text-1xl p-4 cursor-pointer">Policy</li>
               </Link>
               </ul>
