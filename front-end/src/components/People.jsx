@@ -1,53 +1,65 @@
-import React from 'react'
-import profile from '../assets/profile.jpg'
-import abisado from '../assets/teamPhotos/ABISADO.png'
-import bautista from '../assets/teamPhotos/BAUTISTA.jpg'
-import villacarlos from '../assets/teamPhotos/VILLACARLOS.png'
-import salazar from '../assets/teamPhotos/SALAZAR.png'
-import caluya from '../assets/teamPhotos/CALUYA.png'
-import magtira from '../assets/teamPhotos/MAGTIRA.png'
-import malolos from '../assets/teamPhotos/MALOLOS.jpg'
-import barot from '../assets/teamPhotos/BAROT.png'
-import bravo from '../assets/teamPhotos/BRAVO.png'
+import { useEffect, useState } from "react";
+import { client, urlFor } from "../client";
 
 const People = () => {
-  return (
-    
-<div className="grid grid-cols-2 grid-rows-4 md:grid-cols-4 md:grid-rows-7 gap-4 m-4 md:m-6">
-    <div className="relative h-auto col-span-2 row-span-2 md:col-span-2 md:row-span-4 gap-2 bg-white md:h-144">
-      <img className="h-full w-full object-cover z-0"src={abisado} alt=""/>
-      <div className=" bg-white dark:bg-n-9 bg-opacity-70 dark:bg-opacity-70 backdrop-blur dark:backdrop-blur absolute bottom-0 h-1/6 w-full z-10 text-white flex flex-col justify-center items-center">
-      <h1 className='text-2xl md:text-3xl'>Dr. Mideth B Abisado</h1>
-      <h3>Project Lead</h3>
-      </div>
-    </div>
-    <div className="h-auto md:row-span-2 md:col-start-3 gap-2 bg-white">
-      <img className="h-full w-full object-cover"src={salazar} alt="" />
-    </div>
-    <div className="h-auto md:row-span-2 md:col-start-4 gap-2 bg-white">
-      <img className="h-full w-full object-cover"src={bautista} alt="" />
-    </div>
-    <div className="h-auto row-span-1 md:row-span-2 col-start-1 md:col-start-3 md:row-start-3 gap-2 bg-white">
-      <img className="h-full w-full object-cover"src={caluya} alt="" />
-    </div>
-    <div className="h-auto row-span-1 md:row-span-2 col-start-2 md:col-start-4 md:row-start-3 gap-2 bg-white">
-      <img className="h-full w-full object-cover"src={villacarlos} alt="" />
-    </div>
-    <div className="h-auto row-span-1 md:row-span-2 col-start-1 md:row-start-5 gap-2 bg-white">
-      <img className="h-full w-full object-cover"src={magtira} alt="" />
-    </div>
-    <div className="h-auto row-span-1 md:row-span-2 col-start-2 md:row-start-5 gap-2 bg-white">
-      <img className="h-full w-full object-cover"src={malolos} alt="" />
-    </div>
-    <div className="h-auto row-span-1 md:row-span-2 col-start-1 md:col-start-3 md:row-start-5 gap-2 bg-white">
-      <img className="h-full w-full object-cover"src={barot} alt="" />
-    </div>
-    <div className="h-auto row-span-1 md:row-span-2 col-start-2 md:col-start-4 md:row-start-5 gap-2 bg-white">
-      <img className="h-full w-full object-cover"src={bravo} alt="" />  
-    </div>
-</div>
-    
-  )
-}
+  const [teamLab, setTeamLab] = useState([]);
 
-export default People
+  useEffect(() => {
+    const query = `*[_type == "researchTeamLab"] | order(displayOrder asc){
+      _id,
+      name,
+      role,
+      image,
+      colSpan,
+      rowSpan,
+      colStart,
+      rowStart,
+      displayOrder
+    }`;
+    client.fetch(query).then(setTeamLab);
+  }, []);
+
+  return (
+    <div
+      id="next-section"
+      className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-4 md:m-6"
+    >
+      {teamLab.map((member) => {
+        const isLarge = member.name.includes("Mideth");
+
+        // Responsive classNames
+        const colSpan = isLarge ? "lg:col-span-2" : "lg:col-span-1";
+        const rowSpan = isLarge ? "lg:row-span-2" : "lg:row-span-1";
+        const colStart = isLarge && member.colStart ? `lg:col-start-${member.colStart}` : "";
+        const rowStart = isLarge && member.rowStart ? `lg:row-start-${member.rowStart}` : "";
+
+        return (
+          <div
+            key={member._id}
+            className={`relative bg-white rounded-xl overflow-hidden shadow-md col-span-1 row-span-1 ${colSpan} ${rowSpan} ${colStart} ${rowStart}`}
+          >
+            <img
+              src={urlFor(member.image).url()}
+              alt={member.name}
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-white">
+              <h1
+                className={`font-semibold leading-tight ${
+                  isLarge ? "text-2xl md:text-3xl" : "text-lg md:text-xl"
+                }`}
+              >
+                {member.name}
+              </h1>
+              <p className={`${isLarge ? "text-lg md:text-xl" : "text-sm md:text-base"}`}>
+                {member.role}
+              </p>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default People;

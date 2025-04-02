@@ -1,22 +1,46 @@
 export default {
     name: "featuredProject",
-    title: "FeaturedProjects",
+    title: "Featured Projects",
     type: "document",
     fields: [
         {
             name: "image",
             type: "image",
-            title: "Image", 
+            title: "Image",
+            options: { hotspot: true },
         },
         {
-            name: "featuredProjectName",
+            name: "alt",
             type: "string",
-            title: "ProjectName"
+            title: "Image Alt Text",
         },
         {
-            name: "featuredProjectDescription",
+            name: "title",
+            type: "string",
+            title: "Project Name",
+        },
+        {
+            name: "slug",
+            title: "Slug",
+            type: "slug",
+            options: { source: "title", maxLength: 96 },
+        },
+        {
+            name: "description",
             type: "text",
-            title: "ProjectDescription"
+            title: "Project Description",
+        },
+        {
+            name: "featured",
+            title: "Feature this project?",
+            type: "boolean",
+            initialValue: false
+        },  
+        {
+            name: "content",
+            title: "Related Content",
+            type: "array",
+            of: [{ type: "reference", to: [{ type: "featuredProjectsContent" }] }],
         }
     ]
 }

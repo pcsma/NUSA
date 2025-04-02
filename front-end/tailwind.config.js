@@ -3,6 +3,21 @@ import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export default {
+  safelist: [
+    {
+      pattern: /col-span-(1|2|3|4)/,
+    },
+    {
+      pattern: /row-span-(1|2|3|4|5|6|7)/,
+    },
+    {
+      pattern: /col-start-(1|2|3|4)/,
+    },
+    {
+      pattern: /row-start-(1|2|3|4|5|6|7)/,
+    },
+  ],
+  
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -128,5 +143,8 @@ export default {
         },
       });
     }),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+    
   ],
 };

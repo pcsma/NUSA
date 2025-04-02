@@ -4,6 +4,8 @@ import { TiThMenu } from "react-icons/ti"
 import React, {useEffect, useState} from "react"
 import { Link } from "react-router-dom"
 import nulogo from "../assets/nulogo.png"
+import bagongPilipinas from "../assets/BAGONG-PILIPINAS-LOGO.png"
+import dostPchrd from "../assets/DOST-PCHRD-LOGO.png"
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -35,8 +37,12 @@ const NavBar = () => {
     <div className={`fixed top-0 z-50 w-full flex justify-between py-1 px-4 items-center transition-all duration-300 ${!top ? 'bg-black dark:bg-n-5 bg-opacity-80 dark:bg-opacity-50 backdrop-blur-lg' : 'bg-transparent'}`}>
 
             <div className="flex">
-              <img className="cursor-pointer size-[4rem] md:size-[5rem] z-20 m-3" src={nulogo} alt="" />
-              <img className="cursor-pointer size-[5rem] md:size-[7rem] z-20" src={logo} alt="logo" />
+              <Link onClick={scrollToTop} to="https://national-u.edu.ph/">
+                <img className="cursor-pointer size-[4rem] md:size-[5rem] z-20 m-3" src={nulogo} alt="" />
+              </Link>
+              <Link onClick={scrollToTop} to="/">
+                <img className="cursor-pointer size-[5rem] md:size-[7rem] z-20" src={logo} alt="logo" />
+              </Link>
             </div>
             <TiThMenu onClick={handleNav} className="z-20 text-white md:hidden cursor-pointer" size={25} />
             <div className="hidden md:flex m-8 items-center justify-between flex-row gap-8 text-2xl cursor-pointer">
