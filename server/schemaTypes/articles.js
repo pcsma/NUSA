@@ -52,5 +52,20 @@ export default {
       to: [{type: 'featuredProject'}],
       title: 'Project',
     },
+    {
+      name: "gallery",
+      title: "Gallery",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            { name: "image", type: "image", title: "Image" },
+            { name: "caption", type: "string", title: "Caption" }
+          ]
+        }
+      ]
+    }
+    
   ],
 }

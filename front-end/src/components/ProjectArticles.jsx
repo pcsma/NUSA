@@ -21,26 +21,32 @@ const ProjectArticles = () => {
       }
 
     useEffect(() => {
-        const articlesQuery = `*[_type == "article" && references(*[_type == "featuredProject" && slug.current == $id][0]._id)]{
-            _id,
-            title,
-            date,
-            excerpt,
-            slug,
-            image
-        }`;
+    const articlesQuery = `*[_type == "article" && references(*[_type == "featuredProject" && slug.current == $id][0]._id)]{
+        _id,
+        title,
+        date,
+        excerpt,
+        slug,
+        image
+    }`;
 
-        client.fetch(articlesQuery, { id })
-            .then((data) => {
-                setArticles(data);
-                if (data.content?.length > 0) {
-                    setContent(data.content.slice(1)); // Store remaining sections
+    client.fetch(articlesQuery, { id })
+        .then((data) => {
+            // ✅ Deduplicate by _id
+            const uniqueArticlesMap = new Map();
+            data.forEach(article => {
+                if (!uniqueArticlesMap.has(article._id)) {
+                    uniqueArticlesMap.set(article._id, article);
                 }
-            })
-            .catch((error) => {
-                console.error("Sanity Fetch Error (Articles):", error);
             });
-    }, [id]);
+            const uniqueArticles = Array.from(uniqueArticlesMap.values());
+            setArticles(uniqueArticles);
+        })
+        .catch((error) => {
+            console.error("Sanity Fetch Error (Articles):", error);
+        });
+}, [id]);
+
 
     return (
         <div id="next-section" className="flex flex-col lg:flex-row px-3 sm:px-6 md:px-12 mt-8 min-h-screen items-center">

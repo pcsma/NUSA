@@ -46,8 +46,8 @@ const NavBar = () => {
             </div>
             <TiThMenu onClick={handleNav} className="z-20 text-white md:hidden cursor-pointer" size={25} />
             <div className="hidden md:flex m-8 items-center justify-between flex-row gap-8 text-2xl cursor-pointer">
-              <FaUser className="z-20 text-white cursor-pointer"/>
-              <FaSearch className="z-20 text-white cursor-pointer"/>
+              {/* <FaUser className="z-20 text-white cursor-pointer"/>
+              <FaSearch className="z-20 text-white cursor-pointer"/> */}
               <TiThMenu onClick={handleNav} className="z-20 text-white cursor-pointer" />
             </div>  
             <div className={`fixed top-0 left-0 w-full h-screen bg-n-11/90 px-4 py-7 flex flex-col z-50 transform transition-transform duration-300 text-white ${nav ? "translate-x-0" : "-translate-x-full"}`}>
