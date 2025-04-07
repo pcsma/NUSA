@@ -67,7 +67,7 @@ const ResearchTeam = () => {
                 to={`/project/${id}/about`}
                 onClick={scrollToNextSection}
                 className={`font-semibold hover:underline ${
-                  location.pathname === `/project/${id}/about`
+                  location.hash === `/project/${id}/about`
                     ? "text-blue-700 underline"
                     : "text-gray-600"
                 }`}
@@ -80,7 +80,7 @@ const ResearchTeam = () => {
                 to={`/project/${id}/articles`}
                 onClick={scrollToNextSection}
                 className={`font-semibold hover:underline ${
-                  location.pathname === `/project/${id}/articles`
+                  location.hash === `/project/${id}/articles`
                     ? "text-blue-700 underline"
                     : "text-gray-600"
                 }`}
@@ -93,7 +93,7 @@ const ResearchTeam = () => {
                 to={`/project/${id}/researchTeam`}
                 onClick={scrollToNextSection}
                 className={`font-semibold hover:underline ${
-                  location.pathname === `/project/${id}/researchTeam`
+                  location.hash === `/project/${id}/researchTeam`
                     ? "text-blue-700 underline"
                     : "text-gray-600"
                 }`}
@@ -126,7 +126,7 @@ const ResearchTeam = () => {
                   to={`/project/${id}/about`}
                   onClick={scrollToNextSection}
                   className={`font-semibold hover:underline ${
-                    location.pathname === `/project/${id}/about`
+                    location.hash === `/project/${id}/about`
                       ? "text-blue-700 underline"
                       : "text-gray-600"
                   }`}
@@ -139,7 +139,7 @@ const ResearchTeam = () => {
                   to={`/project/${id}/articles`}
                   onClick={scrollToNextSection}
                   className={`font-semibold hover:underline ${
-                    location.pathname === `/project/${id}/articles`
+                    location.hash === `/project/${id}/articles`
                       ? "text-blue-700 underline"
                       : "text-gray-600"
                   }`}
@@ -152,7 +152,7 @@ const ResearchTeam = () => {
                   to={`/project/${id}/researchTeam`}
                   onClick={scrollToNextSection}
                   className={`font-semibold hover:underline ${
-                    location.pathname === `/project/${id}/researchTeam`
+                    location.hash === `/project/${id}/researchTeam`
                       ? "text-blue-700 underline"
                       : "text-gray-600"
                   }`}

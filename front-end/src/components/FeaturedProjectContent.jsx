@@ -71,7 +71,7 @@ const ProjectContent = () => {
                         to={`/project/${id}/about`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                            location.pathname === `/project/${id}/about` ? "text-blue-700 underline" : "text-gray-600"
+                            location.hash === `/project/${id}/about` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                         >
                         About
@@ -82,7 +82,7 @@ const ProjectContent = () => {
                         to={`/project/${id}/articles`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                            location.pathname === `/project/${id}/articles` ? "text-blue-700 underline" : "text-gray-600"
+                            location.hash === `/project/${id}/articles` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                         >
                         Articles
@@ -93,7 +93,7 @@ const ProjectContent = () => {
                         to={`/project/${id}/researchTeam`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                            location.pathname === `/project/${id}/researchTeam` ? "text-blue-700 underline" : "text-gray-600"
+                            location.hash === `/project/${id}/researchTeam` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                         >
                         Research Team
@@ -119,7 +119,7 @@ const ProjectContent = () => {
                         to={`/project/${id}/about`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                        location.pathname === `/project/${id}/about` ? "text-blue-700 underline" : "text-gray-600"
+                        location.hash === `/project/${id}/about` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                     >
                         About
@@ -130,7 +130,7 @@ const ProjectContent = () => {
                         to={`/project/${id}/articles`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                        location.pathname === `/project/${id}/articles` ? "text-blue-700 underline" : "text-gray-600"
+                        location.hash === `/project/${id}/articles` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                     >
                         Articles
@@ -141,7 +141,7 @@ const ProjectContent = () => {
                         to={`/project/${id}/researchTeam`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                        location.pathname === `/project/${id}/researchTeam` ? "text-blue-700 underline" : "text-gray-600"
+                        location.hash === `/project/${id}/researchTeam` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                     >
                         Research Team
