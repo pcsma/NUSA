@@ -53,7 +53,7 @@ const NavBar = () => {
             <div className={`fixed top-0 left-0 w-full h-screen bg-n-11/90 px-4 py-7 flex flex-col z-50 transform transition-transform duration-300 text-white ${nav ? "translate-x-0" : "-translate-x-full"}`}>
 
             <ul className="flex flex-col w-full h-full items-center justify-center" onClick={handleNav}>
-              <Link onClick={scrollToTop} to='/'>
+              <Link onClick={scrollToTop} to='/NUSA'>
                 <li className="font-bold text-1xl p-4 cursor-pointer">
                   Home
                 </li>

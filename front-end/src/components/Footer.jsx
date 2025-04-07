@@ -13,7 +13,7 @@ const Footer = () => {
         <Link onClick={scrollToTop} to="https://national-u.edu.ph/">
           <img className="size-[4rem] md:size-[5rem]" src={nulogo} alt="NU Logo" />
         </Link>
-        <Link onClick={scrollToTop} to="/">
+        <Link onClick={scrollToTop} to="/NUSA">
           <img className="size-[5rem] md:size-[7rem]" src={logo} alt="PCSMA Logo" />
         </Link>
         </div>
@@ -23,7 +23,7 @@ const Footer = () => {
             {/* <h3 className="tracking-wide uppercase text-gray-100">Product</h3> */}
             <ul className="space-y-1">
               <li>
-                <Link onClick={scrollToTop} className="text-gray-100 hover:text-gray-300" to="/">Overview</Link>
+                <Link onClick={scrollToTop} className="text-gray-100 hover:text-gray-300" to="/NUSA">Overview</Link>
               </li>
               <li>
                 <Link onClick={scrollToTop} className="text-gray-100 hover:text-gray-300" to="/publication">Publications</Link>
