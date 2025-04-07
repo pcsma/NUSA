@@ -40,7 +40,7 @@ const NavBar = () => {
               <Link onClick={scrollToTop} to="https://national-u.edu.ph/">
                 <img className="cursor-pointer size-[4rem] md:size-[5rem] z-20 m-3" src={nulogo} alt="" />
               </Link>
-              <Link onClick={scrollToTop} to="/">
+              <Link onClick={scrollToTop} to="/NUSA">
                 <img className="cursor-pointer size-[5rem] md:size-[7rem] z-20" src={logo} alt="logo" />
               </Link>
             </div>
