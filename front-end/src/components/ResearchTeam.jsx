@@ -64,10 +64,10 @@ const ResearchTeam = () => {
           <ul className="index z-10 flex flex-nowrap px-2 sm:px-4 md:px-6 gap-3 md:gap-4">
             <li>
               <Link
-                to={`/project/${id}/about`}
+                to={`/NUSA/project/${id}/about`}
                 onClick={scrollToNextSection}
                 className={`font-semibold hover:underline ${
-                  location.pathname === `/project/${id}/about`
+                  location.pathname === `/NUSA/project/${id}/about`
                     ? "text-blue-700 underline"
                     : "text-gray-600"
                 }`}
@@ -77,10 +77,10 @@ const ResearchTeam = () => {
             </li>
             <li>
               <Link
-                to={`/project/${id}/articles`}
+                to={`/NUSA/project/${id}/articles`}
                 onClick={scrollToNextSection}
                 className={`font-semibold hover:underline ${
-                  location.pathname === `/project/${id}/articles`
+                  location.pathname === `/NUSA/project/${id}/articles`
                     ? "text-blue-700 underline"
                     : "text-gray-600"
                 }`}
@@ -90,10 +90,10 @@ const ResearchTeam = () => {
             </li>
             <li>
               <Link
-                to={`/project/${id}/researchTeam`}
+                to={`/NUSA/project/${id}/researchTeam`}
                 onClick={scrollToNextSection}
                 className={`font-semibold hover:underline ${
-                  location.pathname === `/project/${id}/researchTeam`
+                  location.pathname === `/NUSA/project/${id}/researchTeam`
                     ? "text-blue-700 underline"
                     : "text-gray-600"
                 }`}
@@ -123,10 +123,10 @@ const ResearchTeam = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to={`/project/${id}/about`}
+                  to={`/NUSA/project/${id}/about`}
                   onClick={scrollToNextSection}
                   className={`font-semibold hover:underline ${
-                    location.pathname === `/project/${id}/about`
+                    location.pathname === `/NUSA/project/${id}/about`
                       ? "text-blue-700 underline"
                       : "text-gray-600"
                   }`}
@@ -136,10 +136,10 @@ const ResearchTeam = () => {
               </li>
               <li>
                 <Link
-                  to={`/project/${id}/articles`}
+                  to={`/NUSA/project/${id}/articles`}
                   onClick={scrollToNextSection}
                   className={`font-semibold hover:underline ${
-                    location.pathname === `/project/${id}/articles`
+                    location.pathname === `/NUSA/project/${id}/articles`
                       ? "text-blue-700 underline"
                       : "text-gray-600"
                   }`}
@@ -149,10 +149,10 @@ const ResearchTeam = () => {
               </li>
               <li>
                 <Link
-                  to={`/project/${id}/researchTeam`}
+                  to={`/NUSA/project/${id}/researchTeam`}
                   onClick={scrollToNextSection}
                   className={`font-semibold hover:underline ${
-                    location.pathname === `/project/${id}/researchTeam`
+                    location.pathname === `/NUSA/project/${id}/researchTeam`
                       ? "text-blue-700 underline"
                       : "text-gray-600"
                   }`}

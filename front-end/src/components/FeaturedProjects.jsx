@@ -33,7 +33,7 @@ const FeaturedProjects = () => {
         }  gap-6 p-6`}>
         {research.map((item, index)=>(
             <div key={item._id || index}
-            onClick={() => {scrollToTop();navigate(`/project/${item.slug.current}`)}}
+            onClick={() => {scrollToTop();navigate(`/NUSA/project/${item.slug.current}`)}}
             className="row-span-2 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 hover:text-sky-600 cursor-pointer">
                 {item.image?.asset ? (
                   <img src={urlFor(item.image).url()} alt={item.featuredProjectName} className="w-full h-80 rounded object-cover" />

@@ -43,7 +43,7 @@ const Projects = () => {
           key={item._id || index}
           onClick={() => {
             scrollToTop();
-            navigate(`/project/${item.slug.current}`);
+            navigate(`/NUSA/project/${item.slug.current}`);
           }}
           className="row-span-2 transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 hover:text-sky-600 cursor-pointer"
         >

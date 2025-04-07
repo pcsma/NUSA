@@ -56,7 +56,7 @@ const ProjectArticleDetail = () => {
       <div id="next-section" className="flex flex-col lg:flex-row px-6 md:px-12 mt-8 min-h-screen">
         <aside className="w-full md:w-1/4 md:pr-8 sticky top-32 self-start h-fit">
           <button
-            onClick={() => { scrollToNextSection(); navigate(`/project/${id}/articles`) }}
+            onClick={() => { scrollToNextSection(); navigate(`/NUSA/project/${id}/articles`) }}
             className="relative z-10 bg-blue-500 text-white px-4 py-2 rounded mb-6 hover:bg-blue-600 transition"
           >
             ← Back to Article's List

@@ -36,7 +36,7 @@ const Publication = () => {
         <Link
         onClick={() => {scrollToTop()}}
           key={item._id || index}
-          to={`/publications/${item.slug?.current || ""}`}
+          to={`/NUSA/publications/${item.slug?.current || ""}`}
         >
           <div className="relative">
             <div className="absolute top-0 left-0 w-full border-t-2 border-gray-300" />

@@ -68,10 +68,10 @@ const ProjectContent = () => {
                 <ul className="index z-10 flex flex-nowrap px-2 sm:px-4 md:px-6 gap-3 md:gap-4">
                     <li>
                         <Link
-                        to={`/project/${id}/about`}
+                        to={`/NUSA/project/${id}/about`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                            location.pathname === `/project/${id}/about` ? "text-blue-700 underline" : "text-gray-600"
+                            location.pathname === `/NUSA/project/${id}/about` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                         >
                         About
@@ -79,10 +79,10 @@ const ProjectContent = () => {
                     </li>
                     <li>
                         <Link
-                        to={`/project/${id}/articles`}
+                        to={`/NUSA/project/${id}/articles`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                            location.pathname === `/project/${id}/articles` ? "text-blue-700 underline" : "text-gray-600"
+                            location.pathname === `/NUSA/project/${id}/articles` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                         >
                         Articles
@@ -90,10 +90,10 @@ const ProjectContent = () => {
                     </li>
                     <li>
                         <Link
-                        to={`/project/${id}/researchTeam`}
+                        to={`/NUSA/project/${id}/researchTeam`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                            location.pathname === `/project/${id}/researchTeam` ? "text-blue-700 underline" : "text-gray-600"
+                            location.pathname === `/NUSA/project/${id}/researchTeam` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                         >
                         Research Team
@@ -116,10 +116,10 @@ const ProjectContent = () => {
                 <ul className="space-y-2">
                     <li>
                     <Link
-                        to={`/project/${id}/about`}
+                        to={`/NUSA/project/${id}/about`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                        location.pathname === `/project/${id}/about` ? "text-blue-700 underline" : "text-gray-600"
+                        location.pathname === `/NUSA/project/${id}/about` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                     >
                         About
@@ -127,10 +127,10 @@ const ProjectContent = () => {
                     </li>
                     <li>
                     <Link
-                        to={`/project/${id}/articles`}
+                        to={`/NUSA/project/${id}/articles`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                        location.pathname === `/project/${id}/articles` ? "text-blue-700 underline" : "text-gray-600"
+                        location.pathname === `/NUSA/project/${id}/articles` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                     >
                         Articles
@@ -138,10 +138,10 @@ const ProjectContent = () => {
                     </li>
                     <li>
                     <Link
-                        to={`/project/${id}/researchTeam`}
+                        to={`/NUSA/project/${id}/researchTeam`}
                         onClick={scrollToNextSection}
                         className={`font-semibold hover:underline ${
-                        location.pathname === `/project/${id}/researchTeam` ? "text-blue-700 underline" : "text-gray-600"
+                        location.pathname === `/NUSA/project/${id}/researchTeam` ? "text-blue-700 underline" : "text-gray-600"
                         }`}
                     >
                         Research Team
@@ -149,7 +149,7 @@ const ProjectContent = () => {
                     </li>
                     {content.length > 0 && content.map((section) => (
                     <li key={section._id}>
-                        <Link to={`/project/${id}#${section.title.toLowerCase().replace(/\s+/g, '-')}`} className="text-blue-500 hover:underline">
+                        <Link to={`/NUSA/project/${id}#${section.title.toLowerCase().replace(/\s+/g, '-')}`} className="text-blue-500 hover:underline">
                         {section.title}
                         </Link>
                     </li>

@@ -39,7 +39,7 @@ const PublicationDetail = () => {
   return (
       <div id="next-section" className="max-w-4xl mx-auto px-6 py-10">
          <button
-            onClick={() => {scrollToNextSection();navigate(`/publication`)}}
+            onClick={() => {scrollToNextSection();navigate(`/NUSA/publication`)}}
             className="relative z-10 bg-blue-500 text-white px-4 py-2 rounded mb-6 hover:bg-blue-600 transition">
             ← Back to Publication List
         </button>
