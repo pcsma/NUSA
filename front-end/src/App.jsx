@@ -114,7 +114,7 @@ function App() {
       <NavBar />
       <Hero bgImage={heroData.bgImage} title={heroData.title} description={heroData.description} />
       <Routes>
-        <Route path='/NUSA' element={<Home />} />
+        <Route path='/' element={<Home />} />
         <Route path='/publication' element={<Publication />} />
         <Route path='/people' element={<People />} />
         <Route path='/projects' element={<Projects />} />
