@@ -1,8 +1,15 @@
-<!-- public/404.html -->
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; URL=/NUSA/" />
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // Redirect to index.html and preserve the path
+      const redirectTo = '/NUSA' + location.pathname + location.search + location.hash;
+      location.replace(redirectTo);
+    </script>
   </head>
-  <body></body>
+  <body>
+    <h1>Redirecting...</h1>
+  </body>
 </html>
