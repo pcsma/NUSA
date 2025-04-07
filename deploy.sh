@@ -13,7 +13,3 @@ full_msg="$msg - $timestamp"
 git add .
 git commit -m "$full_msg"
 git push
-
-# Build and deploy
-npm run build
-npm run deploy
