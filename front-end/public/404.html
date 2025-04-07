@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL=/NUSA/" />
     <script>
-      // Redirect to index.html and preserve the path
-      const redirectTo = '/NUSA' + location.pathname + location.search + location.hash;
-      location.replace(redirectTo);
+      const path = window.location.pathname;
+      const redirectTo = "/NUSA/" + path.replace(/^\/NUSA\/?/, "");
+      window.location.replace(redirectTo);
     </script>
   </head>
   <body>
-    <h1>Redirecting...</h1>
+    <p>Redirecting...</p>
   </body>
 </html>
