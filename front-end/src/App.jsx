@@ -115,18 +115,18 @@ function App() {
       <Hero bgImage={heroData.bgImage} title={heroData.title} description={heroData.description} />
       <Routes>
         <Route path='/NUSA' element={<Home />} />
-        <Route path='/NUSA/publication' element={<Publication />} />
-        <Route path='/NUSA/people' element={<People />} />
-        <Route path='/NUSA/projects' element={<Projects />} />
-        <Route path='/NUSA/FAQ' element={<FAQ />} />
-        <Route path='/NUSA/policy' element={<Policy />} />
-        <Route path='/NUSA/featured-projects' element={<FeaturedProjects />} />
-        <Route path="/NUSA/project/:id" element={<Navigate to="about" replace />} />
-        <Route path="/NUSA/project/:id/about" element={<ProjectContent />} />
-        <Route path="/NUSA/project/:id/articles" element={<ProjectArticles />} />
-        <Route path="/NUSA/project/:id/articles/:articleId" element={<ProjectArticleDetail />} />
-        <Route path="/NUSA/project/:id/researchTeam" element={<ResearchTeam />} />
-        <Route path="/NUSA/publications/:publicationId" element={<PublicationDetail />} />
+        <Route path='/publication' element={<Publication />} />
+        <Route path='/people' element={<People />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/FAQ' element={<FAQ />} />
+        <Route path='/policy' element={<Policy />} />
+        <Route path='/featured-projects' element={<FeaturedProjects />} />
+        <Route path="/project/:id" element={<Navigate to="about" replace />} />
+        <Route path="/project/:id/about" element={<ProjectContent />} />
+        <Route path="/project/:id/articles" element={<ProjectArticles />} />
+        <Route path="/project/:id/articles/:articleId" element={<ProjectArticleDetail />} />
+        <Route path="/project/:id/researchTeam" element={<ResearchTeam />} />
+        <Route path="/publications/:publicationId" element={<PublicationDetail />} />
         <Route path="*" element={<h1 className="text-center p-6">404 - Page Not Found</h1>} />
 
       </Routes>

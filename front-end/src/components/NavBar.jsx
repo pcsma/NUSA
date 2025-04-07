@@ -58,20 +58,20 @@ const NavBar = () => {
                   Home
                 </li>
               </Link>
-              <Link onClick={scrollToTop} to="./NUSA/publication">
+              <Link onClick={scrollToTop} to="./publication">
                 <li className="font-bold text-1xl p-4 cursor-pointer">Publications</li>
               </Link>
-              <Link onClick={scrollToTop} to="./NUSA/people">
+              <Link onClick={scrollToTop} to="./people">
                 <li className="font-bold text-1xl p-4 cursor-pointer">
                 People</li>
               </Link>
-              <Link onClick={scrollToTop} to="./NUSA/projects">
+              <Link onClick={scrollToTop} to="./projects">
                 <li className="font-bold text-1xl p-4 cursor-pointer">Projects</li>
               </Link>
-              <Link onClick={scrollToTop} to="./NUSA/FAQ">
+              <Link onClick={scrollToTop} to="./FAQ">
                 <li className="font-bold text-1xl p-4 cursor-pointer">FAQ</li>
               </Link>
-              <Link onClick={scrollToTop} to="./NUSA/policy">
+              <Link onClick={scrollToTop} to="./policy">
                 <li className="font-bold text-1xl p-4 cursor-pointer">Policy</li>
               </Link>
               </ul>
