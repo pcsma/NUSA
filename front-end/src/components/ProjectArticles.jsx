@@ -55,7 +55,7 @@ const ProjectArticles = () => {
             {/* md & below: horizontal nav bar */}
             <div className="flex flex-row gap-2 lg:gap-4 mb-6 items-center lg:hidden">
                 <button 
-                onClick={() => { scrollToNextSection(); navigate("") }} 
+                onClick={() => { scrollToNextSection(); navigate("/") }} 
                 className="index z-10 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
                 >
                 ←
@@ -100,7 +100,7 @@ const ProjectArticles = () => {
             {/* lg: sticky vertical nav sidebar */}
             <aside className="hidden lg:block">
                 <button 
-                onClick={() => { scrollToNextSection(); navigate("") }} 
+                onClick={() => { scrollToNextSection(); navigate("/") }} 
                 className="relative z-10 bg-blue-500 text-white px-4 py-2 rounded mb-4 hover:bg-blue-600 transition cursor-pointer flex items-center"
                 >
                 <span className="hidden lg:inline">← Back to Projects</span>
