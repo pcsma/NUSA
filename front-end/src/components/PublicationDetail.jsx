@@ -44,10 +44,10 @@ const PublicationDetail = () => {
             ← Back to Publication List
         </button>
         <h2 className="text-xl font-bold mb-4">Citation</h2>
-        <p className="mb-6">{publication.citation}</p>
+        <p className="mb-6 text-justify">{publication.citation}</p>
 
         <h2 className="text-xl font-bold mb-4">Abstract</h2>
-        <p className="mb-6">{publication.abstract}</p>
+        <p className="mb-6 text-justify">{publication.abstract}</p>
 
         {publication.linkToFull && (
           <a

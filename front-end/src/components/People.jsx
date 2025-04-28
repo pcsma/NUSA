@@ -20,42 +20,54 @@ const People = () => {
   }, []);
 
   return (
-    <div
-      id="next-section"
-      className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-4 md:m-6"
-    >
+    <div id="next-section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 p-6 bg-white">
       {teamLab.map((member) => {
         const isLarge = member.name.includes("Mideth");
 
-        // Responsive classNames
         const colSpan = isLarge ? "lg:col-span-2" : "lg:col-span-1";
         const rowSpan = isLarge ? "lg:row-span-2" : "lg:row-span-1";
-        const colStart = isLarge && member.colStart ? `lg:col-start-${member.colStart}` : "";
-        const rowStart = isLarge && member.rowStart ? `lg:row-start-${member.rowStart}` : "";
+        const aspect = isLarge ? "aspect-[3/2]" : "aspect-square";
+
 
         return (
           <div
             key={member._id}
-            className={`relative bg-white rounded-xl overflow-hidden shadow-md col-span-1 row-span-1 ${colSpan} ${rowSpan} ${colStart} ${rowStart}`}
+            className={`relative group ${colSpan} ${rowSpan} aspect-square bg-white border border-gray-300 cursor-pointer`}
           >
-            <img
-              src={urlFor(member.image).url()}
-              alt={member.name}
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent px-4 py-3 text-white">
-              <h1
-                className={`font-semibold leading-tight ${
-                  isLarge ? "text-2xl md:text-3xl" : "text-lg md:text-xl"
+            {/* Top-right image */}
+            <div className="absolute top-0 right-0 w-1/2 h-1/2">
+              <img
+                src={urlFor(member.image).width(600).height(600).fit("crop").url()}
+                alt={member.name}
+                className={`w-full h-full ${
+                  isLarge ? "object-contain" : "object-cover"
+                } grayscale group-hover:grayscale-0 transition duration-300`}
+              />
+            </div>
+
+            {/* Bottom-left text */}
+            <div className="absolute bottom-20 left-6 text-left">
+              <h2
+                className={`font-bold leading-tight transition duration-300 ${
+                  isLarge
+                    ? "text-2xl md:text-3xl group-hover:text-blue-600"
+                    : "text-lg group-hover:text-blue-600"
                 }`}
               >
                 {member.name}
-              </h1>
-              <p className={`${isLarge ? "text-lg md:text-xl" : "text-sm md:text-base"}`}>
+              </h2>
+              <p
+                className={`transition duration-300 ${
+                  isLarge
+                    ? "text-lg md:text-xl text-gray-700 group-hover:text-blue-500"
+                    : "text-sm text-gray-600 group-hover:text-blue-500"
+                }`}
+              >
                 {member.role}
               </p>
             </div>
           </div>
+
         );
       })}
     </div>

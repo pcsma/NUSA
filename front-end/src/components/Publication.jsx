@@ -42,7 +42,7 @@ const Publication = () => {
             <div className="absolute top-0 left-0 w-full border-t-2 border-gray-300" />
             <div className="relative flex justify-between col-span-5 min-h-9 p-2 h-auto md:h-auto mx-6 cursor-pointer transition ease-in-out delay-75 hover:-translate-y-1 hover:scale-105 hover:text-sky-600">
               <div className="mx-6 my-4 w-full md:w-2/3">
-                <h1 className="font-bold text-2xl md:text-3xl">
+                <h1 className="font-bold text-2xl md:text-3xl text-justify">
                   {item.publicationName}
                 </h1>
                 <h2 className="w-auto font-semibold">

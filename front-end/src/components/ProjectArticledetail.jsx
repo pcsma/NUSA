@@ -63,7 +63,7 @@ const ProjectArticleDetail = () => {
           </button>
         </aside>
 
-        <div className="prose prose-lg text-gray-800 w-full">
+        <div className="prose prose-lg text-gray-800 w-full text-justify">
           <PortableText
             value={article.content}
             components={{

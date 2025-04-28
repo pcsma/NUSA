@@ -162,7 +162,7 @@ const ProjectContent = () => {
             <main className="w-full md:w-3/4">
                 {/* ✅ About the Project (First Section) */}
                 {aboutContent && (
-                    <section id="about" className="mb-12">
+                    <section id="about" className="mb-12 text-justify">
                         <div className="prose prose-lg max-w-none text-gray-700 text-base leading-relaxed">
                             <PortableText 
                                 value={aboutContent.content} 
