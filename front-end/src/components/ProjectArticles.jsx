@@ -21,7 +21,7 @@ const ProjectArticles = () => {
       }
 
     useEffect(() => {
-    const articlesQuery = `*[_type == "article" && references(*[_type == "featuredProject" && slug.current == $id][0]._id)]{
+    const articlesQuery = `*[_type == "article" && references(*[_type == "featuredProject" && slug.current == $id][0]._id)] | order(date desc){
         _id,
         title,
         date,

@@ -29,6 +29,7 @@ export default {
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
+          7: "#2a368b",
         },
         stroke: {
           1: "#26242C",

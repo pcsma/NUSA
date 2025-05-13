@@ -46,8 +46,27 @@ export default {
         title: 'Display Order',
         type: 'number',
         validation: Rule => Rule.required().min(0),
+      },
+      {
+        name: 'slug',
+        title: 'Slug',
+        type: 'slug',
+        options: {
+          source: 'name',
+          maxLength: 96,
+        },
+        validation: Rule => Rule.required(),
+      },
+      {
+        name: 'overviewTitle',
+        title: 'Overview Title',
+        type: 'string',
+      },
+      {
+        name: 'overviewText',
+        title: 'Overview Text',
+        type: 'text',
       }
-      
     ],
   }
   
